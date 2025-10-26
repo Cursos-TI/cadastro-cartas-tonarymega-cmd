@@ -22,8 +22,8 @@ float PIB = 288.67;
 
 //Carta 2
  
-char Estado_2[20] = "Bahia";
-char Cidade_2[20] = "Salvador";
+char Estado_2[11] = "Bahia";
+char Cidade_2[30] = "Salvador";
 char Código_2[10] = "AD2";
 float População_2 = 14.870907;
 int pontos_turísticos_2 = 50; 
@@ -37,10 +37,10 @@ printf("Digite o nome do primeiro estado:\n");
 scanf("%s", Estado);
 
 printf("Digite o nome da cidade: \n");
-scanf("%s", &Cidade);
+scanf("%s", Cidade);
 
 printf("Digite o código da cidade: \n");
-scanf("%s", &Código);
+scanf("%s", Código);
 
 printf("Digite a população: \n");
 scanf("%f", &Populacao);
