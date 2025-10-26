@@ -17,9 +17,10 @@ char Cidade[20] = "Recife";
 char Código[10] = "PE1";
 float Populacao =  9.562007;
 int pontos_turísticos_1 = 40; 
-float Área_em_Km² = 98.067881;
-float PIB = 288.67;
-
+float Área_em_Km² = 98.312;
+float PIB = 254.9;
+float Densidade_populacional = Populacao / Área_em_Km²;
+float PIB_per_capita = PIB / Populacao;
 //Carta 2
  
 char Estado_2[11] = "Bahia";
@@ -28,7 +29,10 @@ char Código_2[10] = "AD2";
 float População_2 = 14.870907;
 int pontos_turísticos_2 = 50; 
 float Área_em_Km²_2 = 567.295;
-float PIB_2 = 482.82;
+float PIB_2 = 402.6;
+float Densidade_populacional_2 = População_2 / Área_em_Km²_2;
+float PIB_per_capita_2 = PIB_2 / População_2;
+
   
   // Área para entrada de dados
 // Carta 1
@@ -60,10 +64,10 @@ printf("Digite o nome do segundo estado:\n");
 scanf("%s", Estado_2);
 
 printf("Digite o nome da cidade: \n");
-scanf("%s", &Cidade_2);
+scanf("%s", Cidade_2);
 
 printf("Digite o código da cidade: \n");
-scanf("%s", &Código_2);
+scanf("%s", Código_2);
 
 printf("Digite a população: \n");
 scanf("%f", &População_2);
@@ -86,9 +90,10 @@ printf("Cidade: %s\n", Cidade);
 printf("Código: %s\n", Código);
 printf("População: %f\n", Populacao);
 printf("Pontos turísticos: %d\n", pontos_turísticos_1);
-printf("Área em Km²: %f\n", Área_em_Km²);
-printf("PIB (bilhões): %f\n", PIB);
-
+printf("Área em Km²: %.3f\n", Área_em_Km²);
+printf("PIB (bilhões): %.1f\n", PIB);
+printf("Densidade Populacional: %.2f\n", Densidade_populacional);
+printf("PIB per capita: %.2f\n", PIB_per_capita);
 // Carta 2
 
 printf("\nEstado 2: %s\n", Estado_2);
@@ -96,8 +101,10 @@ printf("Cidade: %s\n", Cidade_2);
 printf("Código: %s\n", Código_2);
 printf("População: %f\n", População_2);
 printf("Pontos turísticos: %d\n", pontos_turísticos_2);
-printf("Área em Km²: %f\n", Área_em_Km²_2);
-printf("PIB (bilhões): %f\n", PIB_2);
+printf("Área em Km²: %.3f\n", Área_em_Km²_2);
+printf("PIB (bilhões): %.1f\n", PIB_2);
+printf("Densidade Populacional: %.2f\n", Densidade_populacional_2);
+printf("PIB per capita: %.2f\n", PIB_per_capita_2);
 
 return 0;
 } 
