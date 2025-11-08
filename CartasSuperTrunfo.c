@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
@@ -21,6 +21,13 @@ float Área_em_Km² = 98.312;
 float PIB = 254.9;
 float Densidade_populacional = Populacao / Área_em_Km²;
 float PIB_per_capita = PIB / Populacao;
+float SuperPoder_1 = Populacao + Área_em_Km² + PIB + PIB_per_capita + Densidade_populacional + pontos_turísticos_1;
+
+
+
+
+
+
 //Carta 2
  
 char Estado_2[11] = "Bahia";
@@ -32,6 +39,7 @@ float Área_em_Km²_2 = 567.295;
 float PIB_2 = 402.6;
 float Densidade_populacional_2 = População_2 / Área_em_Km²_2;
 float PIB_per_capita_2 = PIB_2 / População_2;
+float SuperPoder_2 = População_2 + Área_em_Km²_2 + PIB_2 + PIB_per_capita_2 + Densidade_populacional_2 + pontos_turísticos_2;
 
   
   // Área para entrada de dados
@@ -94,6 +102,9 @@ printf("Área em Km²: %.3f\n", Área_em_Km²);
 printf("PIB (bilhões): %.1f\n", PIB);
 printf("Densidade Populacional: %.2f\n", Densidade_populacional);
 printf("PIB per capita: %.2f\n", PIB_per_capita);
+printf("Super Poder da Carta 1: %.2f\n", SuperPoder_1);
+printf("\n");
+
 // Carta 2
 
 printf("\nEstado 2: %s\n", Estado_2);
@@ -105,6 +116,20 @@ printf("Área em Km²: %.3f\n", Área_em_Km²_2);
 printf("PIB (bilhões): %.1f\n", PIB_2);
 printf("Densidade Populacional: %.2f\n", Densidade_populacional_2);
 printf("PIB per capita: %.2f\n", PIB_per_capita_2);
+printf("Super Poder da Carta 2: %.2f\n", SuperPoder_2);
+printf("\n");
+
+    // Área para comparação entre as cartas
+
+printf("Comparação de Cartas:\n");
+printf("A carta com a maior população é: %s\n", (Populacao > População_2) ? Estado : Estado_2);
+printf("A carta com a maior área é: %s\n", (Área_em_Km² > Área_em_Km²_2) ? Estado : Estado_2);
+printf("A carta com o maior PIB é: %s\n", (PIB > PIB_2) ? Estado : Estado_2);
+printf("A carta com o maior PIB per capita é: %s\n", (PIB_per_capita > PIB_per_capita_2) ? Estado : Estado_2);
+printf("A carta com a menor densidade populacional é: %s\n", (Densidade_populacional < Densidade_populacional_2) ? Estado : Estado_2);
+printf("A carta com o maior Super Poder é: %s\n", (SuperPoder_1 > SuperPoder_2) ? Estado : Estado_2);
+
+
 
 return 0;
 } 
